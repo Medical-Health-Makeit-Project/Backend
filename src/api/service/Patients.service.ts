@@ -26,7 +26,7 @@ export class Patient {
           firstname: patientName,
           lastname: patientLastname,
           email: patientEmail,
-          identification: patientId,
+          identification: patientId ? patientId : 'null',
           isAdult: !!isAdult,
           gender: patientGender,
           phone: patientPhone,

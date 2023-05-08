@@ -6,7 +6,7 @@ const appointment = Joi.array().items(
     patientData: Joi.object({
       patientName: Joi.string().required(),
       patientLastname: Joi.string().required(),
-      patientId: Joi.string().required(),
+      patientId: Joi.string().allow(null),
       patientEmail: Joi.string().email().required(),
       patientPhone: Joi.string().required(),
       isAdult: Joi.boolean().required(),

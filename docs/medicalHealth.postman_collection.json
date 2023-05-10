@@ -1,0 +1,945 @@
+{
+	"info": {
+		"_postman_id": "17c73ae9-c6e5-460f-8dba-7dfdebb8ced3",
+		"name": "Medical Health",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23041055"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Carlos\",\n    \"lastname\": \"Leon\",\n    \"username\" : \"Carlos\",\n    \"avatar\" : \"Foto.png\",\n    \"email\" : \"carlos@gmail.com\",\n    \"phone\": \"12345654321\", \n    \"nationality\" : \"Colombiana\",\n    \"gender\" : \"Male\",\n    \"birthday\" : \"2000/12/2\",\n    \"blood_type\" : \"A+\",\n    \"password\": \"12345\",\n    \"role\": \"clgef0h6h0004os09ns0zzosh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ALL_USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"clgr9ybkb0006ospnb65dp99f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3I5eWJrYjAwMDZvc3BuYjY1ZHA5OWYiLCJyb2xlIjoyMDIzLCJpYXQiOjE2ODIxMjUyOTYsImV4cCI6MzM2NDI1MzM4NX0.mNG5KdbdL61QjoI_ekPBvEw-Sl9qPKMJ9NaVK2gk7Vk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "danielito@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/jeanvittory/Documents/Imagenes/Carlo Dolci.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "AUTHENTICATION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"vernaleto@drmebid.com\",\n    \"password\": \"987654321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/auth/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USER_REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Daniel",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Carvajal",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Daniel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "daniel@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "098789091",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "Colombiana",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "Wed Apr 25 1993 16:05:36 GMT-0500",
+									"type": "text"
+								},
+								{
+									"key": "blood_type",
+									"value": "A+",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AUTHORIZATION",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsaDQ5OThmaDAwMGNvc2NjNGtsdm9jbHgiLCJyb2xlIjoxOTkzLCJpYXQiOjE2ODMyMTUxMTUsImV4cCI6MzM2NjQzMTM3Nn0.wPeh0GEJM4YW5uBTWMUT9S9V1eNOevCEM3vurDPCfRA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/auth/authorization",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"authorization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DOCTOR_REGISTER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3NwcTdwdTAwMDBvczBubGFsYmkzMzMiLCJyb2xlIjoxMDAwLCJpYXQiOjE2ODIyNzI2MTgsImV4cCI6MzM2NDU0Nzk5N30.chd3gQPM376TQ1j02hiuvOzGMneTqGtr9HKKHy62CHU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "prefix",
+									"value": "Dr",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "Carlos",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Plazas",
+									"type": "text"
+								},
+								{
+									"key": "area",
+									"value": "Neurologist",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "Wed Apr 12 2023 15:46:31 GMT-0500",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "carlos@drmebid.com",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/jeanvittory/Documents/Imagenes/Carlo Dolci.jpeg"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "headquarter",
+									"value": "{\n    \"city\": \"Rosario\",\n    \"country\": \"Argentina\"\n}",
+									"type": "text"
+								},
+								{
+									"key": "memberships",
+									"value": "[\"correr\"]",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9426191111111",
+									"type": "text"
+								},
+								{
+									"key": "qualifications",
+									"value": "[\"andar\"]",
+									"type": "text"
+								},
+								{
+									"key": "skills",
+									"value": "[\"caminar\"]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/auth/register/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register",
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "doctors",
+			"item": [
+				{
+					"name": "DOCTOR_AS_ADMIN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3JhOWgwajAwMDhvc3BuaTc2dXBnMnAiLCJyb2xlIjoxOTkzLCJpYXQiOjE2ODIxMjU5NTEsImV4cCI6MzM2NDI1NDA0MH0.j3lr_E0Ocjq8MVt4-KM3yvoReobX4g3WvgR7yClQ8uc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "introduction",
+									"value": "soy el doctor plazas",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/doctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DOCTOR",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3FzdmxlZzAwMDBvc2RwNWE0YzAwY2EiLCJyb2xlIjoxMDAwLCJpYXQiOjE2ODIxMjgyMTMsImV4cCI6MzM2NDI2MDAxMH0.gB0h3sw9v8obnqYajsakAtp8N7Q0lzp2rnRdGwm9Ha4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/doctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ALL_DOCTORS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/doctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DOCTORS_AREAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/doctors/areas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"doctors",
+								"areas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DOCTOR_AS_USER",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/doctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3NwcTdwdTAwMDBvczBubGFsYmkzMzMiLCJyb2xlIjoxMDAwLCJpYXQiOjE2ODIyMTIzMDUsImV4cCI6MzM2NDQyMDQ2M30.V9AotVmDEp7vJhlBPR3fX7jjObB2TE1SikZ0avs9qko",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product",
+									"value": "Dolex Gripe ",
+									"type": "text"
+								},
+								{
+									"key": "label",
+									"value": "Genfar",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Doce pastillas en una tableta.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jeanvittory/Documents/Cosas/Arte All We Gather DEC/11.jpg"
+								},
+								{
+									"key": "dose",
+									"value": "1000ml",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Other",
+									"type": "text"
+								},
+								{
+									"key": "newCategory",
+									"value": "Cocina",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3Bza2g1bzAwMDBvczR2NG4zajc4ZTAiLCJyb2xlIjoxMDAwLCJpYXQiOjE2ODIwMzk0OTQsImV4cCI6MzM2NDA4MjMzMX0.hnBsemUUMO8StZiUVN258ANlrJD47rJri74Q_hozG0g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"clgqsxxmj0002oseowmd7yx7z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3FzdmxlZzAwMDBvc2RwNWE0YzAwY2EiLCJyb2xlIjoxMDAwLCJpYXQiOjE2ODIxMjA0MzAsImV4cCI6MzM2NDI0NDM0N30.QSWxXGRmH4mYiDfUWuixvZcnCInI8A4g4BVGucGX4o0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data; boundary=XXX",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "clgqsxxmj0002oseowmd7yx7z",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "Vaso ",
+									"type": "text"
+								},
+								{
+									"key": "label",
+									"value": "Mk",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "esta es la descripcion",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "dose",
+									"value": "5.7mg",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jeanvittory/Documents/Imagenes/prueba.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCTS_BY_CATEGORY",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/products/:categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								":categories"
+							],
+							"variable": [
+								{
+									"key": "categories",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "CATEGORIES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "locations",
+			"item": [
+				{
+					"name": "LOCATIONS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointments",
+			"item": [
+				{
+					"name": "APPOINTMENTS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsaDQ5OThmaDAwMGNvc2NjNGtsdm9jbHgiLCJyb2xlIjoxOTkzLCJpYXQiOjE2ODMyMTUxMTUsImV4cCI6MzM2NjQzMTM3Nn0.wPeh0GEJM4YW5uBTWMUT9S9V1eNOevCEM3vurDPCfRA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "PAYMENTS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{mebid}}/api/v1/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{mebid}}",
+							"path": [
+								"api",
+								"v1",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "mebid",
+			"value": "5150"
+		}
+	]
+}

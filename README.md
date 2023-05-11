@@ -30,7 +30,7 @@ pnpm run dev
 For run seeders and develop with an initial data:
 
 ```sh
-pnpm run prisa:migrate
+pnpm run prisma:migrate
 pnpm run prisma:seeders
 ```
 
